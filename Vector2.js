@@ -81,7 +81,7 @@ class Vector2 {
     this.y /= other.y
   }
 
-  dist: function(Vector2) {
+  dist(Vector2) {
     var dx = this.x - Vector2.x
     var dy = this.y - Vector2.y
     return Math.sqrt(dx * dx + dy * dy)
