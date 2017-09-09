@@ -1,89 +1,91 @@
 class Vector2 {
-  constructor(x, y) {
+  constructor (x, y) {
     this.x = x
     this.y = y
   }
 
-  set(Vector2) {
+  set (Vector2) {
     this.x = Vector2.x
     this.y = Vector2.y
   }
 
-  setArray(arr) {
+  setArray (arr) {
     this.x = arr[0]
     this.y = arr[1]
   }
 
-  setCoords(x, y) {
+  setCoords (x, y) {
     this.x = x
     this.y = y
   }
 
-  clone() {
+  clone () {
     return new Vector2(this.x, this.y)
   }
 
-  mag() {
+  mag () {
     return Math.sqrt(this.x * this.x + this.y * this.y)
   }
 
-  add(Vector2) {
+  add (Vector2) {
     this.x += Vector2.x
     this.y += Vector2.y
   }
 
-  addArray(arr) {
+  addArray (arr) {
     this.x += arr[0]
     this.y += arr[1]
   }
 
-  addCoords(x, y) {
+  addCoords (x, y) {
     this.x += x
     this.y += y
   }
 
-  sub(Vector2) {
+  sub (Vector2) {
     this.x -= Vector2.x
     this.y -= Vector2.y
   }
 
-  subArray(arr) {
+  subArray (arr) {
     this.x -= arr[0]
     this.y -= arr[1]
   }
 
-  subCoords(x, y) {
+  subCoords (x, y) {
     this.x -= x
     this.y -= y
   }
 
-  mult(number) {
+  mult (number) {
     this.x *= number
     this.y *= number
   }
 
-  scale(number) {
+  scale (number) {
     this.mult(number)
   }
 
-  multVec(Vector2) {
+  multVec (Vector2) {
     this.x *= Vector2.x
     this.y *= Vector2.y
   }
 
-  div(number) {
+  div (number) {
     this.x /= number
     this.y /= number
-   }
-
-  divVec(Vector2) {
-    this.x /= other.x
-    this.y /= other.y
   }
 
-  dist(Vector2) {
+  divVec (Vector2) {
+    this.x /= Vector2.x
+    this.y /= Vector2.y
+  }
+
+  dist (Vector2) {
     var dx = this.x - Vector2.x
     var dy = this.y - Vector2.y
     return Math.sqrt(dx * dx + dy * dy)
   }
 }
+
+module.exports = Vector2
